@@ -1,0 +1,21 @@
+{
+  "version": "1",
+  "region": "us-east-1",
+  "userPoolId": "mock-user-pool",
+  "userName": "mock-user-name-uuid",
+  "callerContext": {
+    "awsSdkVersion": "aws-sdk-unknown-unknown",
+    "clientId": "mock-client-id"
+  },
+  "triggerSource": "PreSignUp_SignUp",
+  "request": {
+    "userAttributes": {
+      "email": "mock-email@example.org"
+    }
+  },
+  "response": {
+    "autoConfirmUser": false,
+    "autoVerifyEmail": false,
+    "autoVerifyPhone": false
+  }
+}

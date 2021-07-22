@@ -1,9 +1,22 @@
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import Amplify from 'aws-amplify';
+
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+Amplify.configure({
+  Auth: {
+    region: 'us-east-1',
+    userPoolId: 'us-east-1_dtoahYmZ5',
+    userPoolWebClientId: '728pdne1u1trkfn2cb6u1d3h',
+  },
+});
+
+const App = () => {
   return (
     <div className="App">
+      <AmplifySignOut />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +33,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
-export default App;
+export default withAuthenticator(App);
