@@ -4,13 +4,11 @@ import Amplify from 'aws-amplify';
 import logo from './logo.svg';
 import './App.css';
 
+import settings from './settings';
+
 
 Amplify.configure({
-  Auth: {
-    region: 'us-east-1',
-    userPoolId: 'us-east-1_dtoahYmZ5',
-    userPoolWebClientId: '728pdne1u1trkfn2cb6u1d3h',
-  },
+  Auth: settings.cognito,
 });
 
 const App = () => {
